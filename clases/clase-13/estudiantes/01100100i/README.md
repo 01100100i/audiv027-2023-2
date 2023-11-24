@@ -13,6 +13,9 @@ SoundClassification p5.js
 
 El objetivo era crear una experiencia kinestésica sonora a través de movimientos que actúan como comandos para generar distintos sonidos y asociados al cambio de una imagen. En el caso de Magic Wand, se pueden establecer muchos gatillantes kinestésicos, pero se usó la secuencia numérica que incluía los enteros del 0 al 9. El sistema IMU incluido en el Arduino Nano BLE 33 Sense incluye los sensores acelerómetro y giroscopio, que determinan la figura dibujada en el espacio cuando se mueve el equipo Arduino. Si este movimiento coincide con lo que el código luego interpreta como números del 0 al 9, se traduce la información de los sensores en el output del Monitor Serial de Arduino según una base de datos de inteligencia artificial alimentada con información de secuencia de movimientos de formas de números del 0 al 9.
 
+![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/23419a75-c190-41b0-a4d4-fe78cff8bf24)
+
+
 Se pensó originalmente traducir la información leída por los sensores del sistema IMU directamente para luego producir un sonido en Processing, pero esto presentó las siguientes complicaciones:
 
 La comunicación de valores IMU entre Arduino y Processing usando el código de Magic Wand no se podía establecer directamente debido a la cantidad de variables que el código debía interpretar primero para luego dar outputs de valores de medidas.
@@ -30,6 +33,9 @@ Por ende, se optó por comunicar la lectura del Monitor Serial del código de Ar
        Serial.print(max_index);       // print agregado para que Processing lea el output
        delay(300);
      }
+
+     ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/fb67388e-08ec-4fbc-b26f-6575fef0df9f)
+     ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/da8d31c9-7a0e-4fd8-acb0-7b6ac1c5a6e4)
 
 Luego en Processing se importó la librería Sound, definiendo el siguiente código:
 
@@ -52,6 +58,8 @@ Luego en Processing se importó la librería Sound, definiendo el siguiente cód
 
 De esta forma se logró comunicar los outputs de Magic Wand en Processing. El objetivo de esto es usar la interfaz de Arduino para reproducir sonidos por Processing, debido a que, si bien Arduino posee librerías de archivos de sonido disponibles, no puede reproducir archivos de reproducción de sonido de rango alto debido al límite en su memoria. Por ende, se utiliza la reproducción de sonido por computador, siendo un parlante asociado a Processing.
 
+![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/1f5ffd51-9df7-4c69-8e92-05a9469dd205)
+
 A partir de este código también pudimos desarrollar otras respuestas visuales creando un lienzo y modificando las dimensiones de su output respecto del valor que Magic Wand reconoce: si reconoce un valor 0, el lienzo no se ve afectado, pero a medida que reconoce valores más grandes del 1 al 9, el lienzo negro muestra una barra blanca que va en crecimiento directamente proporcional. La inclusión al código es:
 
 
@@ -69,7 +77,11 @@ A partir de este código también pudimos desarrollar otras respuestas visuales 
   	rect(width/2, height-(myVal/2), 100, myVal);
         }
 
-Luego decidimos probar cómo reproducir música en Processing. Descargamos pequeños samples en freesound.org  para agregar a Processing y que este reproduzca tales archivos, según la librería Sound de Processing. Se evaluó usar la librería Minim también, pero debido a las limitantes por la vigencia de tal librería, se optó por usar la librería Sound, según el código:
+Luego decidimos probar cómo reproducir música en Processing.
+
+![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/56bd9628-5281-41a0-ac9d-f3ffa56509a8)
+
+Descargamos pequeños samples en freesound.org  para agregar a Processing y que este reproduzca tales archivos, según la librería Sound de Processing. Se evaluó usar la librería Minim también, pero debido a las limitantes por la vigencia de tal librería, se optó por usar la librería Sound, según el código:
 
   import processing.sound.*;
 
@@ -81,6 +93,13 @@ Luego decidimos probar cómo reproducir música en Processing. Descargamos peque
        }
 
 Donde wawa.wav es el archivo descargado de freesound.org a probar. Inicialmente el código es insuficiente porque se debe indicar a Processing la dirección donde se encuentra el archivo. Para ello se puede cargar una librería en el menú de Processing que incluya una carpeta con los archivos de sonido a usar. La otra forma es arrastrar con el cursor del mouse los archivos de sonido sobre el display de Processing y dejar que el programa reconozca la dirección. Este último método presenta el problema de que no se puede llamar a otros archivos de sonido nuevos tal que, si se vuelve a cargar con el cursor nuevos archivos, estos reemplazan a los archivos antiguos cargados. Por ello, se recomienda cargar librerías con archivos. Aún así, se debe llamar en el void setup () a todo archivo a reproducir en el código. Sin embargo, usar la función .play() en el void setup () reproduce automáticamente las pistas de sonido, sin ningún condicionante más que el inicio del código, por lo que se propuso evitar esta función en el void setup () y buscar una manera de condicionar en base a los resultados del reconocimiento de Magic Wand (números del 0 al 9) una forma de reproducir el sonido de manera variable.
+
+![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/6f23f80a-3d98-4945-901a-b6955d87d2b5)
+
+![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/b09b2bd7-000a-4e4f-8e65-293a020b7897)
+
+![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/43c970d3-e995-40e3-befa-897c5a3e938a)
+
 
 codigo final
 
