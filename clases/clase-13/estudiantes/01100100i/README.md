@@ -9,6 +9,7 @@ Librería Serial para Arduino y Processing
 Librería Minim para Processing
 SoundClassification p5.js
 
+![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/47517fcf-8482-4bff-9d68-43d543973da3)
 
 El objetivo era crear una experiencia kinestésica sonora a través de movimientos que actúan como comandos para generar distintos sonidos y asociados al cambio de una imagen. En el caso de Magic Wand, se pueden establecer muchos gatillantes kinestésicos, pero se usó la secuencia numérica que incluía los enteros del 0 al 9. El sistema IMU incluido en el Arduino Nano BLE 33 Sense incluye los sensores acelerómetro y giroscopio, que determinan la figura dibujada en el espacio cuando se mueve el equipo Arduino. Si este movimiento coincide con lo que el código luego interpreta como números del 0 al 9, se traduce la información de los sensores en el output del Monitor Serial de Arduino según una base de datos de inteligencia artificial alimentada con información de secuencia de movimientos de formas de números del 0 al 9.
 
@@ -81,11 +82,8 @@ Luego decidimos probar cómo reproducir música en Processing. Descargamos peque
 
 Donde wawa.wav es el archivo descargado de freesound.org a probar. Inicialmente el código es insuficiente porque se debe indicar a Processing la dirección donde se encuentra el archivo. Para ello se puede cargar una librería en el menú de Processing que incluya una carpeta con los archivos de sonido a usar. La otra forma es arrastrar con el cursor del mouse los archivos de sonido sobre el display de Processing y dejar que el programa reconozca la dirección. Este último método presenta el problema de que no se puede llamar a otros archivos de sonido nuevos tal que, si se vuelve a cargar con el cursor nuevos archivos, estos reemplazan a los archivos antiguos cargados. Por ello, se recomienda cargar librerías con archivos. Aún así, se debe llamar en el void setup () a todo archivo a reproducir en el código. Sin embargo, usar la función .play() en el void setup () reproduce automáticamente las pistas de sonido, sin ningún condicionante más que el inicio del código, por lo que se propuso evitar esta función en el void setup () y buscar una manera de condicionar en base a los resultados del reconocimiento de Magic Wand (números del 0 al 9) una forma de reproducir el sonido de manera variable.
 
-Fotos
+codigo final
 
-codigo
-
-referentes
 
 Sonidos a usar freesound.org
 https://freesound.org/people/FreqMan/sounds/42899/
