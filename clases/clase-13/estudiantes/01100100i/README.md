@@ -107,7 +107,7 @@ Donde wawa.wav es el archivo descargado de freesound.org a probar. Inicialmente 
 ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/b09b2bd7-000a-4e4f-8e65-293a020b7897)
 
 Conclusiones:
-No es facil traspasar los datos de sensores incluidos en la placa desde arudino a processing., sin emabrgo logramos hacerlo.
+No es facil traspasar los datos de sensores incluidos en la placa desde arudino a processing, sin embargo logramos hacerlo.
 Nos costó identificar los valores o resultados pra asociarlos a distints operaciones en el codigo.
 
 Sonidos a usar freesound.org
