@@ -58,6 +58,7 @@ Luego en Processing se importó la librería Sound, definiendo el siguiente cód
 
 De esta forma se logró comunicar los outputs de Magic Wand en Processing. El objetivo de esto es usar la interfaz de Arduino para reproducir sonidos por Processing, debido a que, si bien Arduino posee librerías de archivos de sonido disponibles, no puede reproducir archivos de reproducción de sonido de rango alto debido al límite en su memoria. Por ende, se utiliza la reproducción de sonido por computador, siendo un parlante asociado a Processing.
 
+![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/43c970d3-e995-40e3-befa-897c5a3e938a)
 ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/1f5ffd51-9df7-4c69-8e92-05a9469dd205)
 
 A partir de este código también pudimos desarrollar otras respuestas visuales creando un lienzo y modificando las dimensiones de su output respecto del valor que Magic Wand reconoce: si reconoce un valor 0, el lienzo no se ve afectado, pero a medida que reconoce valores más grandes del 1 al 9, el lienzo negro muestra una barra blanca que va en crecimiento directamente proporcional. La inclusión al código es:
@@ -97,9 +98,6 @@ Donde wawa.wav es el archivo descargado de freesound.org a probar. Inicialmente 
 ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/6f23f80a-3d98-4945-901a-b6955d87d2b5)
 
 ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/b09b2bd7-000a-4e4f-8e65-293a020b7897)
-
-![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/43c970d3-e995-40e3-befa-897c5a3e938a)
-
 
 codigo final
 
