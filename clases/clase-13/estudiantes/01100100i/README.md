@@ -1,5 +1,9 @@
 Sonidos desde el movimiento
 
+ Materiales:
+ Arduino con sensor IMU
+ Processing
+ Datos de sonido
  
 
 A partir del código del ejemplo de Tensorflow llamado “Magic Wand”, aplicado al lenguaje de Arduino, se pretendió asignar una respuesta de sonido al ejecutar sus funciones. Para ello era necesario establecer comunicación con un software flexible que permitiera la reproducción de pistas de sonido ya grabadas, y asignar estos sonidos a los outputs del código de “Magic Wand” en Arduino. De la investigación realizada se obtuvieron 3 resultados particulares del código creado: se determinó la forma efectiva de comunicar el código de “Magic Wand” en Arduino con el código creado en Processing, se pudo crear una representación gráfica en Processing del output mostrado en el Monitor Serial de Arduino, y no se pudo lograr asignar a los valores leídos por Processing un sonido asociado en el código. Sin embargo, sí se pudo ejecutar sonidos no condicionados en el código de Processing, demostrando que es posible asociar ambas variables con comandos correspondientes aún por encontrar. Se hicieron múltiples pruebas sobre las posibles soluciones sobre esta función investigada, tomados de distintos referentes:
@@ -103,11 +107,8 @@ Donde wawa.wav es el archivo descargado de freesound.org a probar. Inicialmente 
 ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/b09b2bd7-000a-4e4f-8e65-293a020b7897)
 
 Conclusiones:
-No es facil traspasar los datos de sensores incluidos en la placa desde arudino a processing.
+No es facil traspasar los datos de sensores incluidos en la placa desde arudino a processing., sin emabrgo logramos hacerlo.
 Nos costó identificar los valores o resultados pra asociarlos a distints operaciones en el codigo.
-
-codigo final
-
 
 Sonidos a usar freesound.org
 https://freesound.org/people/FreqMan/sounds/42899/
