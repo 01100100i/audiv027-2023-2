@@ -35,6 +35,7 @@ Por ende, se optó por comunicar la lectura del Monitor Serial del código de Ar
      }
 
      ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/fb67388e-08ec-4fbc-b26f-6575fef0df9f)
+     
      ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/da8d31c9-7a0e-4fd8-acb0-7b6ac1c5a6e4)
 
 Luego en Processing se importó la librería Sound, definiendo el siguiente código:
