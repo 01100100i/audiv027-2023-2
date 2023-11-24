@@ -34,9 +34,11 @@ Por ende, se optó por comunicar la lectura del Monitor Serial del código de Ar
        delay(300);
      }
 
-     ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/fb67388e-08ec-4fbc-b26f-6575fef0df9f)
+  ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/9e14ce2d-d35d-45da-84c8-d1d8430d0ced)
+
      
-     ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/da8d31c9-7a0e-4fd8-acb0-7b6ac1c5a6e4)
+![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/310744d3-0bea-46c5-8c3c-da36d6b520d7)
+
 
 Luego en Processing se importó la librería Sound, definiendo el siguiente código:
 
@@ -99,6 +101,10 @@ Donde wawa.wav es el archivo descargado de freesound.org a probar. Inicialmente 
 ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/6f23f80a-3d98-4945-901a-b6955d87d2b5)
 
 ![image](https://github.com/01100100i/audiv027-2023-2/assets/142625648/b09b2bd7-000a-4e4f-8e65-293a020b7897)
+
+Conclusiones:
+No es facil traspasar los datos de sensores incluidos en la placa desde arudino a processing.
+Nos costó identificar los valores o resultados pra asociarlos a distints operaciones en el codigo.
 
 codigo final
 
